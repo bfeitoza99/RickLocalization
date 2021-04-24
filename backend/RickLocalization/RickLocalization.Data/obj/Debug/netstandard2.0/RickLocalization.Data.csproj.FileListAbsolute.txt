@@ -1,0 +1,9 @@
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\bin\Debug\netstandard2.0\RickLocalization.Data.deps.json
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\bin\Debug\netstandard2.0\RickLocalization.Data.dll
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\bin\Debug\netstandard2.0\RickLocalization.Data.pdb
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\obj\Debug\netstandard2.0\RickLocalization.Data.csprojAssemblyReference.cache
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\obj\Debug\netstandard2.0\RickLocalization.Data.AssemblyInfoInputs.cache
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\obj\Debug\netstandard2.0\RickLocalization.Data.AssemblyInfo.cs
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\obj\Debug\netstandard2.0\RickLocalization.Data.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\obj\Debug\netstandard2.0\RickLocalization.Data.dll
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.Data\obj\Debug\netstandard2.0\RickLocalization.Data.pdb
