@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1zbcY+GZmholfIyll8hm/efb0egvSatFVPBI2qUhILQPyanZaAw2o3ujQ9CiisiikZMkipdZEO344OIm5U7+HA==",
+  "dgSpecHash": "T5/8xTMnAhNyTdf3KJ9afPHftm2sjndmHCvEIm1sHN4w2Wzy1WVI4hI0nLZZ1MlEqCt2c8uEIAIBFNsHEF/Qhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\API\\RickLocalization.API.csproj",
+  "projectFilePath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.API\\RickLocalization.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bruno\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",

@@ -5996,8 +5996,8 @@
     },
     "RickLocalization.Application/1.0.0": {
       "type": "project",
-      "path": "../Application/RickLocalization.Application.csproj",
-      "msbuildProject": "../Application/RickLocalization.Application.csproj"
+      "path": "../RickLozalization.Application/RickLocalization.Application.csproj",
+      "msbuildProject": "../RickLozalization.Application/RickLocalization.Application.csproj"
     },
     "RickLocalization.Data/1.0.0": {
       "type": "project",
@@ -6028,11 +6028,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\API\\RickLocalization.API.csproj",
+      "projectUniqueName": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.API\\RickLocalization.API.csproj",
       "projectName": "RickLocalization.API",
-      "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\API\\RickLocalization.API.csproj",
+      "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.API\\RickLocalization.API.csproj",
       "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\API\\obj\\",
+      "outputPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6051,11 +6051,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\Application\\RickLocalization.Application.csproj": {
-              "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\Application\\RickLocalization.Application.csproj"
-            },
             "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Data\\RickLocalization.Data.csproj": {
               "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Data\\RickLocalization.Data.csproj"
+            },
+            "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLozalization.Application\\RickLocalization.Application.csproj": {
+              "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLozalization.Application\\RickLocalization.Application.csproj"
             }
           }
         }
