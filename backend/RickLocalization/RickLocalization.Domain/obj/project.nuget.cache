@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mRxMh/7GARQRGITpvs4CiZ2zx9/MD5UZ3pa7f/UKqu+gQ85JJX/RfuVqD9vnbL1/1lY3BXUzxyyYDzZzPb40tA==",
+  "dgSpecHash": "uJ3mjdVPz1Pe6Fxv9sYlXWUjKi0bGgjiOc6LO5ZCGta/7bxm7FneWDlnJmljT730GgDDjiAVGhVXe+hwBPcwOQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Domain\\RickLocalization.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

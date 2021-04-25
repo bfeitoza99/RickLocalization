@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SbXUim7GNTKZFq7daCllAQ/nky0oJJjFpRIOJFjWWk+nLdHSjxuE632dFFltyHx0yC5Cr9iEa6wRs7Qq+MUBnQ==",
+  "dgSpecHash": "LLk3kvv7eco8IDmlT9cS0fTW1HwzO7VRurGvBnmX5Gg5pH7kcuc03lzKIhK6RqNgbj2/f8VGEOKLlChEZGGWeg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\Application\\RickLocalization.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Bruno\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Bruno\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }

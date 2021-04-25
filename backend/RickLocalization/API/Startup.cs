@@ -43,6 +43,8 @@ namespace API
 
             services.AddDbContextPool<RickLocalizationContext>(
             options => options.UseSqlServer(Configuration.GetConnectionString("RickLocalizationDBConnection")));
+
+          
         }
 
 
@@ -66,6 +68,11 @@ namespace API
 
             app.UseSwagger();
 
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<RickLocalizationContext>();
+                context.Database.Migrate();
+            }
 
             app.UseSwaggerUI(c =>
             {
