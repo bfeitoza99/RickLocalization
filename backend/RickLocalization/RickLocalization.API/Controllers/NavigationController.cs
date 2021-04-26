@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RickLocalization.Application.Query.Navigation;
+using RickLocalization.Application.Query.RickLastDimensionNavigated;
 
 namespace RickLocalization.API.Controllers
 {
@@ -24,6 +25,29 @@ namespace RickLocalization.API.Controllers
                var  Message = $"About page visited at {DateTime.UtcNow.ToLongTimeString()}";
                 _logger.LogInformation(Message);
                 var command = new RickNavigationsQueryRequest(rickId);
+                var result = mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception)
+            {
+
+                return BadRequest(StatusCodes.Status400BadRequest);
+            }
+        }
+
+
+        [HttpGet]
+        [Route("/last-navigation")]
+        [ProducesResponseType(typeof(RickLastDimensionNavigatedResponse), StatusCodes.Status200OK)]
+        public IActionResult GetLastNavigationByRickId([FromServices] IMediator mediator,
+                                                    [FromServices] ILogger<NavigationController> _logger,
+                                                    [FromQuery] int rickId)
+        {
+            try
+            {
+                var Message = $"About page visited at {DateTime.UtcNow.ToLongTimeString()}";
+                _logger.LogInformation(Message);
+                var command = new RickLastDimensionNavigatedRequest(rickId);
                 var result = mediator.Send(command);
                 return Ok(result);
             }
