@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +17,7 @@ namespace RickLocalization.API.Controllers
         [HttpGet]
         [Route("/details/{rickId}")]
         [ProducesResponseType(typeof(RickDetailsQueryResponse), StatusCodes.Status200OK)]
-        public IActionResult GetById(
+        public async Task<IActionResult> GetById(
                                     [FromServices] IMediator mediator,
                                     [FromServices] ILogger<RickController> _logger,
                                      int rickId)
@@ -25,7 +26,7 @@ namespace RickLocalization.API.Controllers
             {
                 _logger.LogInformation($"Get details by rickId: {rickId}");
                 var command = new RickDetailsQueryRequest(rickId);
-                var result = mediator.Send(command);
+                var result = await mediator.Send(command);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -39,7 +40,7 @@ namespace RickLocalization.API.Controllers
         [HttpGet]
         [Route("/rick")]
         [ProducesResponseType(typeof(RickQueryResponse), StatusCodes.Status200OK)]
-        public IActionResult Get([FromServices] IMediator mediator,
+        public async Task<IActionResult> Get([FromServices] IMediator mediator,
                                  [FromServices] ILogger<RickController> _logger)
         {
             try
@@ -47,7 +48,7 @@ namespace RickLocalization.API.Controllers
                 _logger.LogInformation($"Get all Ricks dimension name");
 
                 var command = new RickQueryRequest();
-                var result = mediator.Send(command);
+                var result = await mediator.Send(command);
                 return Ok(result);
             }
             catch (Exception ex)

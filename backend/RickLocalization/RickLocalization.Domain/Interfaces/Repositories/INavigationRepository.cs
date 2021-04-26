@@ -8,7 +8,7 @@ namespace RickLocalization.Domain.Interfaces.Repositories
 {
     public interface INavigationRepository
     {
-        List<Navigation> GetByRickId(int id);
+        Task<List<Navigation>> GetByRickId(int id);
 
         Task<string> GetLastDimensionNavigatedByRickId(int id);
     }

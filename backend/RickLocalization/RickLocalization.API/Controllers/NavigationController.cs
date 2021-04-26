@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,7 @@ namespace RickLocalization.API.Controllers
         [HttpGet]
         [Route("/navigations/{rickId}")]
         [ProducesResponseType(typeof(RickNavigationsQueryResponse), StatusCodes.Status200OK)]
-        public IActionResult GetNavigationsByRickId([FromServices] IMediator mediator,
+        public async Task<IActionResult> GetNavigationsByRickId([FromServices] IMediator mediator,
                                                     [FromServices] ILogger<NavigationController> _logger,
                                                     int rickId)
         {
@@ -25,7 +26,7 @@ namespace RickLocalization.API.Controllers
             {
                 _logger.LogInformation($"Get all navigation by rickId: {rickId}");
                 var command = new RickNavigationsQueryRequest(rickId);
-                var result = mediator.Send(command);
+                var result = await mediator.Send(command);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -39,15 +40,15 @@ namespace RickLocalization.API.Controllers
         [HttpGet]
         [Route("/last-navigation/{rickId}")]
         [ProducesResponseType(typeof(RickLastDimensionNavigatedQueryResponse), StatusCodes.Status200OK)]
-        public IActionResult GetLastNavigationByRickId([FromServices] IMediator mediator,
+        public async Task<IActionResult> GetLastNavigationByRickId([FromServices] IMediator mediator,
                                                     [FromServices] ILogger<NavigationController> _logger,
-                                                    [FromQuery] int rickId)
+                                                    int rickId)
         {
             try
             {
                 _logger.LogInformation($"Get last navigation by rickId: {rickId}");
                 var command = new RickLastDimensionNavigatedQueryRequest(rickId);
-                var result = mediator.Send(command);
+                var result = await mediator.Send(command);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -60,14 +61,14 @@ namespace RickLocalization.API.Controllers
         [HttpPost]
         [Route("/create")]
         [ProducesResponseType(typeof(RickCreateNavigationCommandResponse), StatusCodes.Status200OK)]
-        public IActionResult GetLastNavigationByRickId([FromServices] IMediator mediator,
+        public async Task<IActionResult> GetLastNavigationByRickId([FromServices] IMediator mediator,
                                                     [FromServices] ILogger<NavigationController> _logger,
                                                     [FromBody] RickCreateNavigationCommandRequest navigation)
         {
             try
             {                
                 _logger.LogInformation($"Starting create navigation by rickId: {navigation.RickId}");
-                var result = mediator.Send(navigation);
+                var result = await mediator.Send(navigation);
                 return Ok(result);
             }
             catch (Exception ex)

@@ -6,5 +6,11 @@ namespace RickLocalization.Application.Command.RickCreateNavigation
 {
     public class RickCreateNavigationCommandResponse
     {
+        public RickCreateNavigationCommandResponse(bool isSucess)
+        {
+            IsSucess = isSucess;
+        }
+
+        public bool IsSucess { get; set; }
     }
 }

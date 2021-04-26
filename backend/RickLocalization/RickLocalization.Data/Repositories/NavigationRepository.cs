@@ -16,17 +16,17 @@ namespace RickLocalization.Data.Repositories
             
         }
 
-        public List<Navigation>  GetByRickId(int id)
+        public async Task<List<Navigation>>  GetByRickId(int id)
         {
             var query = _context.Navigation.Where(x => x.RickId == id);
             if (query.Any())
-                return query.ToList();
+                return await query.ToListAsync();
             return null;
         }
 
         public async Task<string> GetLastDimensionNavigatedByRickId(int id)
         {
-            var lastNavigation = await _context.Navigation.Where(x => x.RickId == id).OrderByDescending(y => y.RickId).FirstOrDefaultAsync();
+            var lastNavigation = await _context.Navigation.Where(x => x.RickId == id).OrderByDescending(y => y.Id).FirstOrDefaultAsync();
 
             if (lastNavigation != null)
                 return lastNavigation.DimensionDestiny;

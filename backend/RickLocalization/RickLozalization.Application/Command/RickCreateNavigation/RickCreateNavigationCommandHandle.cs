@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using RickLocalization.Domain.Entities;
 using RickLocalization.Domain.Interfaces.Repositories;
 using System;
@@ -9,27 +10,31 @@ using System.Threading.Tasks;
 
 namespace RickLocalization.Application.Command.RickCreateNavigation
 {
-    public class RickCreateNavigationCommandHandle :  IRequestHandler<RickCreateNavigationCommandRequest, RickCreateNavigationCommandResponse>
+    public class RickCreateNavigationCommandHandle : IRequestHandler<RickCreateNavigationCommandRequest, RickCreateNavigationCommandResponse>
     {
         private readonly IRepository<Navigation> _navigationRepository;
         private readonly IUnitOfWork _unitOfWork;
-        public RickCreateNavigationCommandHandle(IRepository<Navigation> navigationRepository, IUnitOfWork unitOfWork)
+        private readonly IMapper _mapper;
+        public RickCreateNavigationCommandHandle(IRepository<Navigation> navigationRepository, IUnitOfWork unitOfWork, IMapper mapper)
         {
             _navigationRepository = navigationRepository;
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task<RickCreateNavigationCommandResponse> Handle(RickCreateNavigationCommandRequest request, CancellationToken cancellationToken)
         {
-            var response = new RickCreateNavigationCommandResponse();
+            
+            var navigation = _mapper.Map<Navigation>(request);
 
-            var navigation = new Navigation();
+            _navigationRepository.Save(navigation);
 
-             _navigationRepository.Save(navigation);
+            await _unitOfWork.Commit();          
 
-            await _unitOfWork.Commit();
+            var response = new RickCreateNavigationCommandResponse(true);
 
             return response;
+
         }
     }
 }

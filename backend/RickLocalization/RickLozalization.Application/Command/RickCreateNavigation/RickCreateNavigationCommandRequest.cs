@@ -12,5 +12,7 @@ namespace RickLocalization.Application.Command.RickCreateNavigation
 
         }
         public int RickId { get; set; }
+        public string DimensionOrigin { get; set; }
+        public string DimensionDestiny { get; set; }
     }
 }

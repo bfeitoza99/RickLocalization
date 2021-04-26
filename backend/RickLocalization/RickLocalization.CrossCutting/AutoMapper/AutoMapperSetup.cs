@@ -19,6 +19,7 @@ namespace RickLocalization.CrossCutting.AutoMapper
             CreateMap<Navigation, RickNavigations>();
             CreateMap<Rick, RickQueryResponse>();
             CreateMap<Rick, RickDetailsQueryResponse>();
+            CreateMap<Rick, RickResponse>();
             #endregion
         }
     }

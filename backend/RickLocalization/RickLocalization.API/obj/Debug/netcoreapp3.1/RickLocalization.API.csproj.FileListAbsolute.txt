@@ -151,3 +151,6 @@ C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLoc
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\RickLocalization.CrossCutting.pdb
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.MvcApplicationPartsAssemblyInfo.cache

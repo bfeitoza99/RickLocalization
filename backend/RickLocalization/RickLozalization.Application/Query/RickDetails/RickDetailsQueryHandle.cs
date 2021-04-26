@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using RickLocalization.Domain.Entities;
 using RickLocalization.Domain.Interfaces.Repositories;
 using System;
@@ -12,18 +13,19 @@ namespace RickLocalization.Application.Query.RickDetails
     public class RickDetailsQueryHandle : IRequestHandler<RickDetailsQueryRequest, RickDetailsQueryResponse>
     {
         private readonly IRepository<Domain.Entities.Rick> _rickRepository;
-        public RickDetailsQueryHandle(IRepository<Domain.Entities.Rick> rickRepository)
+        private readonly IMapper _mapper;
+        public RickDetailsQueryHandle(IRepository<Domain.Entities.Rick> rickRepository, IMapper mapper)
         {
             _rickRepository = rickRepository;
+            _mapper = mapper;
         }
 
         public async Task<RickDetailsQueryResponse> Handle(RickDetailsQueryRequest request, CancellationToken cancellationToken)
         {
-            var response = new RickDetailsQueryResponse();
-
+            
             var rickDetails = _rickRepository.GetById(request.RickId);
 
-
+            var response = _mapper.Map<RickDetailsQueryResponse>(rickDetails);
 
             return response;
         }
