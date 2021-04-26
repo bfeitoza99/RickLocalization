@@ -140,9 +140,6 @@ C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLoc
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.csprojAssemblyReference.cache
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.AssemblyInfoInputs.cache
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.AssemblyInfo.cs
-C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.csproj.CoreCompileInputs.cache
-C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.RazorTargetAssemblyInfo.cache
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.csproj.CopyComplete
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\staticwebassets\RickLocalization.API.StaticWebAssets.Manifest.cache
@@ -152,3 +149,5 @@ C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLoc
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.genruntimeconfig.cache
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\RickLocalization.CrossCutting.dll
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\RickLocalization.CrossCutting.pdb
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

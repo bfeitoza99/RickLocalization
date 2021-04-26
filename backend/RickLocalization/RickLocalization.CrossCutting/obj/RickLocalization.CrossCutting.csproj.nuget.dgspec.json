@@ -35,6 +35,9 @@
               },
               "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Domain\\RickLocalization.Domain.csproj": {
                 "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Domain\\RickLocalization.Domain.csproj"
+              },
+              "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLozalization.Application\\RickLocalization.Application.csproj": {
+                "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLozalization.Application\\RickLocalization.Application.csproj"
               }
             }
           }
@@ -47,6 +50,16 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -181,6 +194,71 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLozalization.Application\\RickLocalization.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLozalization.Application\\RickLocalization.Application.csproj",
+        "projectName": "RickLocalization.Application",
+        "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLozalization.Application\\RickLocalization.Application.csproj",
+        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLozalization.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Domain\\RickLocalization.Domain.csproj": {
+                "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Domain\\RickLocalization.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

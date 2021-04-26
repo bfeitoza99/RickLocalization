@@ -8,7 +8,8 @@ C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLoc
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\obj\Debug\netstandard2.1\RickLocalization.CrossCutting.csprojAssemblyReference.cache
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\obj\Debug\netstandard2.1\RickLocalization.CrossCutting.AssemblyInfoInputs.cache
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\obj\Debug\netstandard2.1\RickLocalization.CrossCutting.AssemblyInfo.cs
-C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\obj\Debug\netstandard2.1\RickLocalization.CrossCutting.csproj.CoreCompileInputs.cache
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\obj\Debug\netstandard2.1\RickLocalization.CrossCutting.csproj.CopyComplete
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\obj\Debug\netstandard2.1\RickLocalization.CrossCutting.dll
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\obj\Debug\netstandard2.1\RickLocalization.CrossCutting.pdb
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\bin\Debug\netstandard2.1\RickLocalization.Application.dll
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.CrossCutting\bin\Debug\netstandard2.1\RickLocalization.Application.pdb

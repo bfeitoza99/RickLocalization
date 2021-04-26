@@ -39,6 +39,7 @@ namespace API
             services.AddDbContextPool<RickLocalizationContext>(
             options => options.UseSqlServer(Configuration.GetConnectionString("RickLocalizationDBConnection")));
 
+            services.AddAutoMapper(typeof(RickLocalization.CrossCutting.AutoMapper.AutoMapperSetup));
             
             services.AddRepositories();
             
