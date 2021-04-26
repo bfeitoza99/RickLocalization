@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace RickLocalization.Application.Query.RickDetails
 {
-    public class RickDetailsQueryHandle : IRequestHandler<RickDetailsQueryRequest, RickDetailsQueryResponse>
+    public class RickDetailsHandle : IRequestHandler<RickDetailsRequest, RickDetailsResponse>
     {
         private readonly IRepository<Rick> _rickRepository;
-        public RickDetailsQueryHandle(IRepository<Rick> rickRepository)
+        public RickDetailsHandle(IRepository<Rick> rickRepository)
         {
             _rickRepository = rickRepository;
         }
 
-        public async Task<RickDetailsQueryResponse> Handle(RickDetailsQueryRequest request, CancellationToken cancellationToken)
+        public async Task<RickDetailsResponse> Handle(RickDetailsRequest request, CancellationToken cancellationToken)
         {
-            var response = new RickDetailsQueryResponse();
+            var response = new RickDetailsResponse();
 
             var rickDetails = _rickRepository.GetById(request.RickId);
 
