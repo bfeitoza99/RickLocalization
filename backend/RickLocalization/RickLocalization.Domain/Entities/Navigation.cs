@@ -4,9 +4,8 @@ using System.Text;
 
 namespace RickLocalization.Domain.Entities
 {
-    public class Navigation
+    public class Navigation : BaseEntity
     {
-        public int Id { get; set; }
         public string DimensionOrigin { get; set; }
         public string DimensionDestiny { get; set; }
         public int RickId { get; set; }

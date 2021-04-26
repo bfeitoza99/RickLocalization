@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RickLocalization.CrossCutting\RickLocalization.CrossCutting.csproj" />
     <ProjectReference Include="..\RickLocalization.Data\RickLocalization.Data.csproj" />
     <ProjectReference Include="..\RickLozalization.Application\RickLocalization.Application.csproj" />
   </ItemGroup>

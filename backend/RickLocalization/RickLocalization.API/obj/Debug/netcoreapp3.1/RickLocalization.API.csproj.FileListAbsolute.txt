@@ -150,3 +150,5 @@ C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLoc
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.dll
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.pdb
 C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\obj\Debug\netcoreapp3.1\RickLocalization.API.genruntimeconfig.cache
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\RickLocalization.CrossCutting.dll
+C:\Users\Bruno\Documents\Teste\RickLocalization\backend\RickLocalization\RickLocalization.API\bin\Debug\netcoreapp3.1\RickLocalization.CrossCutting.pdb

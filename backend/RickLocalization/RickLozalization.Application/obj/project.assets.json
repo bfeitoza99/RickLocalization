@@ -10,6 +10,16 @@
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {}
         }
+      },
+      "RickLocalization.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/RickLocalization.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RickLocalization.Domain.dll": {}
+        }
       }
     }
   },
@@ -31,11 +41,17 @@
         "mediatr.9.0.0.nupkg.sha512",
         "mediatr.nuspec"
       ]
+    },
+    "RickLocalization.Domain/1.0.0": {
+      "type": "project",
+      "path": "../RickLocalization.Domain/RickLocalization.Domain.csproj",
+      "msbuildProject": "../RickLocalization.Domain/RickLocalization.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "MediatR >= 9.0.0"
+      "MediatR >= 9.0.0",
+      "RickLocalization.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -67,7 +83,11 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Domain\\RickLocalization.Domain.csproj": {
+              "projectPath": "C:\\Users\\Bruno\\Documents\\Teste\\RickLocalization\\backend\\RickLocalization\\RickLocalization.Domain\\RickLocalization.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

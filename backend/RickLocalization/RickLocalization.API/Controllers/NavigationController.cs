@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using RickLocalization.Application.Query.Navigation;
 
 namespace RickLocalization.API.Controllers
@@ -15,13 +13,27 @@ namespace RickLocalization.API.Controllers
     {
 
         [HttpGet]
-        [Route("")]
-        public IActionResult GetById(
-                                    [FromServices] IMediator mediator,
-                                    [FromQuery] NavigationQueryRequest command)
+        [Route("/rick-navigations")]
+        [ProducesResponseType(typeof(RickNavigationsQueryResponse), StatusCodes.Status200OK)]
+        public IActionResult GetNavigationsByRickId([FromServices] IMediator mediator,
+                                                    [FromServices] ILogger<NavigationController> _logger,
+                                                    [FromQuery] int rickId)
         {
-            var result = mediator.Send(command);
-            return Ok(result);
+            try
+            {
+               var  Message = $"About page visited at {DateTime.UtcNow.ToLongTimeString()}";
+                _logger.LogInformation(Message);
+                var command = new RickNavigationsQueryRequest(rickId);
+                var result = mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception)
+            {
+
+                return BadRequest(StatusCodes.Status400BadRequest);
+            }
         }
+
+
     }
 }
