@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RickFacadeService } from '../services/facade/rick-facade.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rickService: RickFacadeService,) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+
+    let data = await this.rickService.getAll();
+
+    console.log(data.ricks);
   }
 
 }
