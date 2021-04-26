@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RickLocalization.Application.Query.Navigation;
+using RickLocalization.Application.Query.RickDetails;
 
 namespace RickLocalization.API.Controllers
 {
@@ -16,14 +13,14 @@ namespace RickLocalization.API.Controllers
 
         [HttpGet]
         [Route("/rick-details")]
-        [ProducesResponseType(typeof(RickNavigationsQueryResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(RickDetailsQueryResponse), StatusCodes.Status200OK)]
         public IActionResult Get(
                                     [FromServices] IMediator mediator,
                                     [FromQuery] int rickId)
         {
             try
             {
-                var command = new RickNavigationsQueryRequest(rickId);
+                var command = new RickDetailsQueryRequest(rickId);
                 var result = mediator.Send(command);
                 return Ok(result);
             }
