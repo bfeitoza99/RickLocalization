@@ -42,7 +42,11 @@ namespace API
             services.AddAutoMapper(typeof(RickLocalization.CrossCutting.AutoMapper.AutoMapperSetup));
             
             services.AddRepositories();
-            
+
+            services.AddCors();
+
+            services.AddSwaggerGen();
+
         }
 
        
@@ -57,6 +61,12 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) 
+                .AllowCredentials());
 
             app.UseAuthorization();
 
