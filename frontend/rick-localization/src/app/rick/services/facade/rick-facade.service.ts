@@ -8,7 +8,7 @@ export class RickFacadeService {
     constructor(private rickService: RickService,){}
 
 
-   public  getById(id:number): Promise<RickDetailsQueryResponse>{
+   public  getByIdAsync(id:number): Promise<RickDetailsQueryResponse>{
     return new Promise((resolve, reject) => {
 
         const successCallback = async (data: RickDetailsQueryResponse) => {
@@ -21,7 +21,7 @@ export class RickFacadeService {
       });
     }
 
-    public  getAll(): Promise<RickQueryResponse>{
+    public  getAllAsync(): Promise<RickQueryResponse>{
         return new Promise((resolve, reject) => {
     
             const successCallback = async (data: RickQueryResponse) => {

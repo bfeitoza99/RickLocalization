@@ -12,7 +12,7 @@ export class ListComponent implements OnInit {
 
   async ngOnInit() {
 
-    let data = await this.rickService.getAll();
+    let data = await this.rickService.getAllAsync();
 
     console.log(data.ricks);
   }
