@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RickLocalization.Application.Command.RickCreateNavigation
 {
-    public class RickCreateNavigationResponse
+    public class RickCreateNavigationCommandResponse
     {
     }
 }

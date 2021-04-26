@@ -2,6 +2,8 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using RickLocalization.Application.Query.Rick;
 using RickLocalization.Application.Query.RickDetails;
 
 namespace RickLocalization.API.Controllers
@@ -12,20 +14,45 @@ namespace RickLocalization.API.Controllers
     {
 
         [HttpGet]
-        [Route("/rick-details")]
+        [Route("/details/{rickId}")]
         [ProducesResponseType(typeof(RickDetailsQueryResponse), StatusCodes.Status200OK)]
-        public IActionResult Get(
+        public IActionResult GetById(
                                     [FromServices] IMediator mediator,
-                                    [FromQuery] int rickId)
+                                    [FromServices] ILogger<RickController> _logger,
+                                     int rickId)
         {
             try
             {
+                _logger.LogInformation($"Get details by rickId: {rickId}");
                 var command = new RickDetailsQueryRequest(rickId);
                 var result = mediator.Send(command);
                 return Ok(result);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogInformation(ex.Message);
+
+                return BadRequest(StatusCodes.Status400BadRequest);
+            }
+        }
+
+        [HttpGet]
+        [Route("/rick")]
+        [ProducesResponseType(typeof(RickQueryResponse), StatusCodes.Status200OK)]
+        public IActionResult Get([FromServices] IMediator mediator,
+                                 [FromServices] ILogger<RickController> _logger)
+        {
+            try
+            {
+                _logger.LogInformation($"Get all Ricks dimension name");
+
+                var command = new RickQueryRequest();
+                var result = mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex.Message);
 
                 return BadRequest(StatusCodes.Status400BadRequest);
             }

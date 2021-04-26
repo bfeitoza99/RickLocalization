@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace RickLocalization.Application.Query.RickLastDimensionNavigated
 {
-    public class RickLastDimensionNavigatedHandle : IRequestHandler<RickLastDimensionNavigatedRequest, RickLastDimensionNavigatedResponse>
+    public class RickLastDimensionNavigatedQueryHandle : IRequestHandler<RickLastDimensionNavigatedQueryRequest, RickLastDimensionNavigatedQueryResponse>
     {
         private readonly INavigationRepository _navigationRepository;
-        public RickLastDimensionNavigatedHandle(INavigationRepository navigationRepository)
+        public RickLastDimensionNavigatedQueryHandle(INavigationRepository navigationRepository)
         {
             _navigationRepository = navigationRepository;
         }
 
-        public async Task<RickLastDimensionNavigatedResponse> Handle(RickLastDimensionNavigatedRequest request, CancellationToken cancellationToken)
+        public async Task<RickLastDimensionNavigatedQueryResponse> Handle(RickLastDimensionNavigatedQueryRequest request, CancellationToken cancellationToken)
         {
-            var response = new RickLastDimensionNavigatedResponse();
+            var response = new RickLastDimensionNavigatedQueryResponse();
 
             var navigations = await _navigationRepository.GetLastDimensionNavigatedByRickId(request.RickId);
 

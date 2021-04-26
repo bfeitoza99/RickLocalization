@@ -15,30 +15,29 @@ namespace RickLocalization.API.Controllers
     {
 
         [HttpGet]
-        [Route("/rick-navigations")]
+        [Route("/navigations/{rickId}")]
         [ProducesResponseType(typeof(RickNavigationsQueryResponse), StatusCodes.Status200OK)]
         public IActionResult GetNavigationsByRickId([FromServices] IMediator mediator,
                                                     [FromServices] ILogger<NavigationController> _logger,
-                                                    [FromQuery] int rickId)
+                                                    int rickId)
         {
             try
             {
-               var  Message = $"About page visited at {DateTime.UtcNow.ToLongTimeString()}";
-                _logger.LogInformation(Message);
+                _logger.LogInformation($"Get all navigation by rickId: {rickId}");
                 var command = new RickNavigationsQueryRequest(rickId);
                 var result = mediator.Send(command);
                 return Ok(result);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                _logger.LogInformation(ex.Message);
                 return BadRequest(StatusCodes.Status400BadRequest);
             }
         }
 
 
         [HttpGet]
-        [Route("/last-navigation")]
+        [Route("/last-navigation/{rickId}")]
         [ProducesResponseType(typeof(RickLastDimensionNavigatedQueryResponse), StatusCodes.Status200OK)]
         public IActionResult GetLastNavigationByRickId([FromServices] IMediator mediator,
                                                     [FromServices] ILogger<NavigationController> _logger,
@@ -46,15 +45,14 @@ namespace RickLocalization.API.Controllers
         {
             try
             {
-                var Message = $"About page visited at {DateTime.UtcNow.ToLongTimeString()}";
-                _logger.LogInformation(Message);
+                _logger.LogInformation($"Get last navigation by rickId: {rickId}");
                 var command = new RickLastDimensionNavigatedQueryRequest(rickId);
                 var result = mediator.Send(command);
                 return Ok(result);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                _logger.LogInformation(ex.Message);
                 return BadRequest(StatusCodes.Status400BadRequest);
             }
         }
@@ -67,15 +65,14 @@ namespace RickLocalization.API.Controllers
                                                     [FromBody] RickCreateNavigationCommandRequest navigation)
         {
             try
-            {
-                var Message = $"About page visited at {DateTime.UtcNow.ToLongTimeString()}";
-                _logger.LogInformation(Message);
+            {                
+                _logger.LogInformation($"Starting create navigation by rickId: {navigation.RickId}");
                 var result = mediator.Send(navigation);
                 return Ok(result);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                _logger.LogInformation(ex.Message);
                 return BadRequest(StatusCodes.Status400BadRequest);
             }
         }

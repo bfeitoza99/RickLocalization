@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RickLocalization.Application.Query.RickLastDimensionNavigated
 {
-    public class RickLastDimensionNavigatedResponse
+    public class RickLastDimensionNavigatedQueryResponse
     {
     }
 }
