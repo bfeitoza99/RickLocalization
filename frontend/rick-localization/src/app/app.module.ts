@@ -18,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -27,6 +28,7 @@ import { DetailsComponent } from './rick/details/details.component';
 import { NavigationHistoryComponent } from './rick/navigation-history/navigation-history.component';
 import { CreateNavigationComponent } from './rick/create-navigation/create-navigation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -55,7 +57,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatDialogModule,
     ReactiveFormsModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
+    NgbModule,
    
     
   ],

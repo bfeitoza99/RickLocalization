@@ -1,1 +1,33 @@
-<p>navigation-history works!</p>
+<div *ngIf="data && table">
+    <div class="center-img-background">
+        <img [src]="data.imgUrl">
+    </div>
+    <div class="center-table">
+     
+     <table  mat-table [dataSource]="formatedData" style="background-color: rgba(117, 111, 117, 0.25);" >
+               
+                <ng-container matColumnDef="dimensionOrigin" sticky>
+                    <mat-header-cell *matHeaderCellDef > Dimensão Origem </mat-header-cell>
+                    <mat-cell  *matCellDef="let element"> {{element.dimensionOrigin}} </mat-cell>
+                </ng-container>
+                
+                <ng-container matColumnDef="dimensionDestiny" sticky>
+                    <mat-header-cell *matHeaderCellDef  > Dimensão Destino </mat-header-cell>
+                    <mat-cell *matCellDef="let element" > {{element.dimensionDestiny}} </mat-cell>
+                </ng-container>
+           
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </table>
+
+            <div>
+                <mat-paginator [length]="dataSource.length"
+                                [pageSize]="size"
+                                [pageIndex]="page"
+                                [pageSizeOptions]="[5]"
+                                (page)="getData($event)"
+                style="opacity: 1; background-color: transparent; color:black; font-weight: bold;font-size: 15px; margin-right: 255px;">
+  </mat-paginator>
+            </div>        
+    </div>
+</div>
