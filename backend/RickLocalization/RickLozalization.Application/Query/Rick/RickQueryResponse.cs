@@ -22,6 +22,7 @@ namespace RickLocalization.Application.Query.Rick
         public int Id { get; set; }
         public string DimensionOriginName { get; set; }
         public string Details { get; set; }
+        public string ImgUrl { get; set; }
     }
 
 }

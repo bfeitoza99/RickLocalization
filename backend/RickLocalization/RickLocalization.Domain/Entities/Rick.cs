@@ -8,6 +8,7 @@ namespace RickLocalization.Domain.Entities
     {       
         public string DimensionOriginName { get; set; }
         public string Details { get; set; }
+        public string ImgUrl { get; set; }
         public List<Navigation> Navigations { get; set; }
 
     }

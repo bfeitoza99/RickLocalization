@@ -14,4 +14,5 @@ export interface RickResponse {
     id?: number;
     dimensionOriginName?: string;
     details?: string;
+    imgUrl?: string;
 }

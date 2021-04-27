@@ -6,11 +6,11 @@ import { ListComponent } from './rick/list/list.component';
 const routes: Routes = [
   {
   path: "",
-  redirectTo: "rick",
+  redirectTo: "Rick",
   pathMatch: "full",
 }, 
 {
-  path: "rick",
+  path: "Rick",
   component: ListComponent
 }
 ];

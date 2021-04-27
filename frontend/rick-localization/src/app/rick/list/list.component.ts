@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RickFacadeService } from '../services/facade/rick-facade.service';
+import { RickQueryResponse, RickResponse } from '../services/swagger-generated';
+
 
 @Component({
   selector: 'app-list',
@@ -10,11 +12,37 @@ export class ListComponent implements OnInit {
 
   constructor(private rickService: RickFacadeService,) { }
 
+  data : RickQueryResponse;
+  formatedData = [];
+  
+
+  page = 0;
+  size = 4;
+
   async ngOnInit() {
 
-    let data = await this.rickService.getAllAsync();
+    this.data = await this.rickService.getAllAsync();
+    
 
-    console.log(data.ricks);
+    this.getData({pageIndex: this.page, pageSize: this.size});
   }
 
+  getData(obj) {
+    
+    let index=0,
+        startingIndex=obj.pageIndex * obj.pageSize,
+        endingIndex=startingIndex + obj.pageSize;
+
+    this.formatedData = this.data.ricks.filter(() => {
+      index++;
+      return (index > startingIndex && index <= endingIndex) ? true : false;
+    });
+  }
+
+  detail(id:number) {
+     alert('foi'+  id )
+  }
+  
 }
+
+

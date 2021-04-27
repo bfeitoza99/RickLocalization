@@ -1,1 +1,22 @@
-<p>list works!</p>
+
+<div class="background-grid center">
+</div>
+
+<div class="center " >
+<div fxFill fxLayout="column" fxLayoutAlign="space-between" *ngIf= "formatedData && data">
+    <div fxLayout="row wrap">
+      <ng-container *ngFor="let rick of formatedData">
+          <img [src]="rick.imgUrl" (click)= "detail(rick.id)">
+          
+      </ng-container>
+    </div>
+  
+    <mat-paginator [length]="data.ricks.length"
+                  [pageSize]="size"
+                  [pageIndex]="page"
+                  [pageSizeOptions]="[4, 8, 12]"
+                  (page)="getData($event)"
+                  style="opacity: 1; background-color: transparent; color:black; font-weight: bold;font-size: 15px;">
+    </mat-paginator>
+  </div>
+</div>
