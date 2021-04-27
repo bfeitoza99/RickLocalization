@@ -2,3 +2,38 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.bg {  
+    background: url("https://wallpaperaccess.com/full/637645.jpg")no-repeat center center;     
+    background-size: cover; 
+    height: 100%;
+    opacity: 0.8;
+    filter: blur(3px);
+    
+  }
+
+  .center {  
+    position: absolute;
+    height: auto;
+    width: auto;
+    width: 63%;
+    top : 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform    : translate(-50%, -50%); 
+    text-align: center;
+    }
+  
+    img {
+      height: 300px;
+      width: 400px;
+      margin: 8px;    
+      cursor: pointer; 
+    }
+  
+    .background-grid {
+      
+      background-color: white;
+      opacity: 0.7;
+    }
+  
+  

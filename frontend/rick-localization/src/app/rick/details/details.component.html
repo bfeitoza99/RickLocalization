@@ -1,1 +1,24 @@
-<p>details works!</p>
+<div *ngIf="data">
+    <div class="center-img-background">
+        <img [src]="data.imgUrl">
+    </div>
+
+    <div class="center-form" > 
+        <form>
+            <mat-form-field appearance="legacy" class="">
+                <mat-label>Dimensão Original</mat-label>
+                <input  style="color: black; font-weight: bold"  matInput value={{data.dimensionOriginName}}>
+             
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy" class="text-area">
+                <mat-label>Detalhes</mat-label>
+                <textarea style="color: black; font-weight: bold;" rows="1" matInput value={{data.details}}></textarea>
+            </mat-form-field>
+        </form>
+    </div>
+    <div class="center-button">
+        <button mat-flat-button style="background-color: #8D2D56; color: black;" (click)="createNavigation(data.id)" > Adicionar Viagem </button>
+        <button mat-flat-button style="margin-left: 36%  !important; background-color: #8D2D56;color: black;" (click)="navigationHistory(data.id)"> Histórico Navegação  </button>
+    </div>
+</div>

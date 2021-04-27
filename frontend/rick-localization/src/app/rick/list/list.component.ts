@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RickFacadeService } from '../services/facade/rick-facade.service';
 import { RickQueryResponse, RickResponse } from '../services/swagger-generated';
 
@@ -10,7 +11,9 @@ import { RickQueryResponse, RickResponse } from '../services/swagger-generated';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private rickService: RickFacadeService,) { }
+  constructor(private rickService: RickFacadeService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { }
 
   data : RickQueryResponse;
   formatedData = [];
@@ -40,7 +43,7 @@ export class ListComponent implements OnInit {
   }
 
   detail(id:number) {
-     alert('foi'+  id )
+    this.router.navigate(["details", id], { relativeTo: this.activatedRoute });    
   }
   
 }
