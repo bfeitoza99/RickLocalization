@@ -1,0 +1,41 @@
+
+.background-color-dialog{
+  background-color: white !important;
+}
+::ng-deep.mat-dialog-container {
+  background-color: white !important;
+  border: 1px solid black;
+}
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: #2b193E;
+}
+
+::ng-deep mat-progress-bar .mat-progress-bar-buffer {
+  background: #E4E8EB;
+}
+
+   ::ng-deep  .mat-form-field-label {
+    
+    color: #2b193E !important;
+    font-weight: bold  !important;
+    font-size: 20px !important;
+   }
+
+   ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #2b193E !important;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #2b193E !important;
+     opacity: 0.7!important;
+}
+
+.invalid-feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 80%;
+  color: #f86c6b;
+}
+
+

@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RickFacadeService } from '../services/facade/rick-facade.service';
 import { RickDetailsQueryResponse } from '../services/swagger-generated';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { CreateNavigationComponent } from '../create-navigation/create-navigation.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-details',
@@ -17,7 +18,7 @@ export class DetailsComponent implements OnInit {
   constructor(private rickService: RickFacadeService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private modalService: NgbModal,
+    private dialog: MatDialog
     ) { }
 
   async ngOnInit() {
@@ -27,21 +28,17 @@ export class DetailsComponent implements OnInit {
   }
 
   createNavigation(id: number){
-    const modalInstance = this.modalService.open(CreateNavigationComponent, {
-      size: "lg",
-      backdrop: "static",
+    const dialogRef = this.dialog.open(CreateNavigationComponent, {
+      width: '300px',
+      height: '270px',
+      backdropClass: 'background-color-dialog',      
+      data: {id: id}
     });
 
-    modalInstance.componentInstance.id = this.id;
-
-    modalInstance.result.then(
-      async (data) => {
-        if (data) {
-        }
-
-      },
-      (error) => console.warn("form closed", error)
-    );
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      
+    });
   }
 
   navigationHistory(id: number){

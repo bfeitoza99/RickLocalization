@@ -1,1 +1,27 @@
-<p>create-navigation works!</p>
+
+<div  *ngIf="lastDimension"> 
+    <form [formGroup]="createNavigationForm" >
+        <mat-form-field appearance="outline" style="display: revert !important;">
+            <mat-label style="font-size: 15px;">Dimensão Atual</mat-label>
+            <input  style="color: black; font-weight: bold; "  matInput readonly formControlName="dimensionOrigin" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline"  style="display: revert !important;">
+            <mat-label style="font-size: 15px;">Dimensão Destino</mat-label>
+            <input  style="color: black; font-weight: bold; "  matInput formControlName="dimensionDestiny">
+        </mat-form-field>
+        <div *ngIf="dimensionDestiny.errors" class="invalid-feedback">
+            <div *ngIf="dimensionDestiny.errors.required">
+              A Dimensão Destino é obrigatória!
+            </div>
+          </div>
+    </form>
+    <div class="center-button-modal">
+        <button mat-flat-button style="background-color: #2b193E ; color: white; float: right;" (click)="onSubmit()" > Adicionar</button>
+        <button mat-flat-button style=" background-color: #2b193E ; color: white;"  (click)="closeDialog()"> Voltar   </button>
+    </div>
+    <div *ngIf="submitting" style="margin-top: 5px">
+        <mat-progress-bar style="color:  #2b193E" mode="query"></mat-progress-bar>
+    </div>
+   
+</div>

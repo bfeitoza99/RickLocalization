@@ -35,5 +35,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       background-color: white;
       opacity: 0.7;
     }
+
+    .snackBarSucces{
+      background: green  !important;
+      background-color: green  !important;
+      color: white !important;
+    }
+
+    .snackBarFailed{
+      background: red  !important;
+      background-color: red  !important;
+      color: white !important;
+    }
   
   

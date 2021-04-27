@@ -1,5 +1,5 @@
 .background-style {
-   background-color: gray; 
+   background-color: gray  !important; 
    height: 50%; 
    width: 40%;
    opacity: 0.9;
@@ -25,6 +25,8 @@ img {
     opacity: 0.65;
     cursor: auto !important;
     border-radius: 10%;
+    border: 3px solid white;
+    
     
   }
 
@@ -33,7 +35,7 @@ img {
     height: auto;
     width: auto;
     width: 63%;
-    top : 40%;
+    top : 45%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform    : translate(-50%, -50%); 

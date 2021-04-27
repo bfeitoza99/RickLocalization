@@ -4,8 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BASE_PATH } from './rick/services/swagger-generated';
-import { NgbModalModule } from "@ng-bootstrap/ng-bootstrap";
+import { BASE_PATH, NavigationService } from './rick/services/swagger-generated';
 
 import { ListComponent } from './rick/list/list.component';
 
@@ -16,13 +15,19 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 
 
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './rick/details/details.component';
 import { NavigationHistoryComponent } from './rick/navigation-history/navigation-history.component';
 import { CreateNavigationComponent } from './rick/create-navigation/create-navigation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -44,16 +49,22 @@ import { CreateNavigationComponent } from './rick/create-navigation/create-navig
     MatPaginatorModule,
     MatCardModule,
     MatFormFieldModule,
+    FormsModule, 
     MatInputModule,
     MatButtonModule,
-    NgbModalModule,
-    NgbModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatProgressBarModule,
+    MatSnackBarModule
+   
+    
   ],
   entryComponents: [ CreateNavigationComponent],
   providers: [ 
     
     { provide: BASE_PATH, useValue: 'https://localhost:5001' },
-    RickService
+    RickService,
+    NavigationService
   ],
   
   bootstrap: [AppComponent]
