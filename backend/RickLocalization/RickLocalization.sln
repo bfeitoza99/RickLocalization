@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5- UnitTests", "5- UnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickLocalization.Tests", "RickLocalization.Tests\RickLocalization.Tests\RickLocalization.Tests.csproj", "{9239325C-5B39-404A-8EBE-1685C6F5AF79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickLocalization.Presentation", "RickLocalization.Presentation\RickLocalization.Presentation.csproj", "{1B34CCA0-3BD8-45F2-ABD9-32E45AC31C6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{9239325C-5B39-404A-8EBE-1685C6F5AF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9239325C-5B39-404A-8EBE-1685C6F5AF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9239325C-5B39-404A-8EBE-1685C6F5AF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B34CCA0-3BD8-45F2-ABD9-32E45AC31C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B34CCA0-3BD8-45F2-ABD9-32E45AC31C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B34CCA0-3BD8-45F2-ABD9-32E45AC31C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B34CCA0-3BD8-45F2-ABD9-32E45AC31C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{A144054C-0429-4FDE-A546-CE41E3B3A757} = {F5A27CA2-E56E-4D99-ADA2-708F64A0A15D}
 		{C9C069B2-A777-4B58-A677-B23AE43313E5} = {3635748B-221B-4BB9-886F-8B5D9F69ED20}
 		{9239325C-5B39-404A-8EBE-1685C6F5AF79} = {D23B1D54-29BC-4FF9-B5A5-2FF0022E7D22}
+		{1B34CCA0-3BD8-45F2-ABD9-32E45AC31C6E} = {3A957F0C-DD1E-448B-AE5C-516CD5229CD4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC52759B-0D64-4D9D-8278-201F679F5A09}

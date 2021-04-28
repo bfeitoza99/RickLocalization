@@ -8,7 +8,7 @@ namespace RickLocalization.Data
 {
     public class RickLocalizationContext : DbContext
     {
-        public RickLocalizationContext() 
+        public RickLocalizationContext(DbContextOptions<RickLocalizationContext> options) : base(options)
         {
             
         }
