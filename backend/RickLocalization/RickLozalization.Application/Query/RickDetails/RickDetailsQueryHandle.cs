@@ -25,6 +25,11 @@ namespace RickLocalization.Application.Query.RickDetails
             
             var rickDetails = _rickRepository.GetById(request.RickId);
 
+            if (rickDetails == null)
+            {
+                return new RickDetailsQueryResponse();
+            }
+
             var response = _mapper.Map<RickDetailsQueryResponse>(rickDetails);
 
             return response;

@@ -7,5 +7,9 @@ namespace RickLocalization.Application.Query.Rick
 {
     public class RickQueryRequest : IRequest<RickQueryResponse>
     {
+        public RickQueryRequest()
+        {
+
+        }
     }
 }

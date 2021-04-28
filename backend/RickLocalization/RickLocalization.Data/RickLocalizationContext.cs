@@ -8,9 +8,9 @@ namespace RickLocalization.Data
 {
     public class RickLocalizationContext : DbContext
     {
-        public RickLocalizationContext(DbContextOptions<RickLocalizationContext> options) : base(options)
+        public RickLocalizationContext() 
         {
-            //Database.EnsureCreated();
+            
         }
 
         public DbSet<Rick> Rick { get; set; }

@@ -29,7 +29,7 @@ namespace RickLocalization.Application.Query.RickLastDimensionNavigated
             {
                  var rick = _rickRepository.GetById(request.RickId);
 
-                currentDimension = rick.DimensionOriginName;
+                currentDimension = rick?.DimensionOriginName;
             }
 
             var response = new RickLastDimensionNavigatedQueryResponse(currentDimension);

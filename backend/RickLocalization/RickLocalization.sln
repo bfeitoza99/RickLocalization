@@ -15,15 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1- Data", "4.1- Data", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 -CrossCutting", "4.2 -CrossCutting", "{94B7934E-5662-402B-9C47-5D8193E11C27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickLocalization.Domain", "RickLocalization.Domain\RickLocalization.Domain.csproj", "{5A191478-FB69-47A7-B55C-8CC416205162}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RickLocalization.Domain", "RickLocalization.Domain\RickLocalization.Domain.csproj", "{5A191478-FB69-47A7-B55C-8CC416205162}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickLocalization.Data", "RickLocalization.Data\RickLocalization.Data.csproj", "{E056C9A4-ADED-43C2-A5FC-695A98FF39C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RickLocalization.Data", "RickLocalization.Data\RickLocalization.Data.csproj", "{E056C9A4-ADED-43C2-A5FC-695A98FF39C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickLocalization.CrossCutting", "RickLocalization.CrossCutting\RickLocalization.CrossCutting.csproj", "{ED4E9934-8D5A-43D5-8BFE-00197C70B898}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RickLocalization.CrossCutting", "RickLocalization.CrossCutting\RickLocalization.CrossCutting.csproj", "{ED4E9934-8D5A-43D5-8BFE-00197C70B898}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RickLocalization.Application", "RickLozalization.Application\RickLocalization.Application.csproj", "{A144054C-0429-4FDE-A546-CE41E3B3A757}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RickLocalization.API", "RickLocalization.API\RickLocalization.API.csproj", "{C9C069B2-A777-4B58-A677-B23AE43313E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0- Presentantion", "0- Presentantion", "{3A957F0C-DD1E-448B-AE5C-516CD5229CD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5- UnitTests", "5- UnitTests", "{D23B1D54-29BC-4FF9-B5A5-2FF0022E7D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickLocalization.Tests", "RickLocalization.Tests\RickLocalization.Tests\RickLocalization.Tests.csproj", "{9239325C-5B39-404A-8EBE-1685C6F5AF79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,10 @@ Global
 		{C9C069B2-A777-4B58-A677-B23AE43313E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9C069B2-A777-4B58-A677-B23AE43313E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9C069B2-A777-4B58-A677-B23AE43313E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9239325C-5B39-404A-8EBE-1685C6F5AF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9239325C-5B39-404A-8EBE-1685C6F5AF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9239325C-5B39-404A-8EBE-1685C6F5AF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9239325C-5B39-404A-8EBE-1685C6F5AF79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +73,7 @@ Global
 		{ED4E9934-8D5A-43D5-8BFE-00197C70B898} = {94B7934E-5662-402B-9C47-5D8193E11C27}
 		{A144054C-0429-4FDE-A546-CE41E3B3A757} = {F5A27CA2-E56E-4D99-ADA2-708F64A0A15D}
 		{C9C069B2-A777-4B58-A677-B23AE43313E5} = {3635748B-221B-4BB9-886F-8B5D9F69ED20}
+		{9239325C-5B39-404A-8EBE-1685C6F5AF79} = {D23B1D54-29BC-4FF9-B5A5-2FF0022E7D22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC52759B-0D64-4D9D-8278-201F679F5A09}

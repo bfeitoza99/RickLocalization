@@ -7,6 +7,10 @@ namespace RickLocalization.Application.Query.RickDetails
 {
     public class RickDetailsQueryRequest : IRequest<RickDetailsQueryResponse>
     {
+        public RickDetailsQueryRequest()
+        {
+
+        }
         public RickDetailsQueryRequest(int rickId)
         {
             RickId = rickId;
